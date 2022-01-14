@@ -1,0 +1,20 @@
+.grocery-login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    &__container {
+        margin: 0 auto;
+        width: 85%;
+    }
+    &__form-field {
+        box-shadow: none;
+        border: none;
+    }
+    &__button {
+        padding: 0.5em 1.5em;
+        background-color: darken(rgba(77, 133, 243, 0.841), 2.5);
+        margin: 20px auto;
+        width: 35%;
+    }
+}

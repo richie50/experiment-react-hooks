@@ -1,0 +1,7 @@
+.grocery-items {
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+        margin: 1rem;
+    }
+}

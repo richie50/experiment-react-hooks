@@ -1,0 +1,9 @@
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin-bottom: 1em;
+    &__groceries {
+        grid-column: 2 / 3;
+        padding: 0.9rem
+    }
+}
