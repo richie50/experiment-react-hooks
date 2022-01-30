@@ -1,19 +1,21 @@
 import "./styles.scss";
 
 import { NavLink, Outlet } from "react-router-dom";
-import React, { useCallback, useContext, useMemo } from "react";
+import React, { useContext, useMemo } from "react";
 
-import { authenticationContext } from "../../provider/auth-context";
-import logo from "../../../src/logo.svg";
+import { authenticationContext } from "provider/auth-context";
+import logo from "logo.svg";
 
 function Header() {
   // react-router v6 , oh boy why
   const { loggedIn } = useContext(authenticationContext);
+
   const isActive = useMemo(() => {
     //experimentation
     return ({ isActive }) => (isActive ? "link-active" : "");
   }, []);
-  console.log(isActive);
+
+  // console.log(isActive);
   return (
     <>
       <div className="header">

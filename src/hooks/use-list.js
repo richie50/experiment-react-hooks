@@ -1,4 +1,3 @@
-import { getList } from "../mock";
 import { useState } from "react";
 
 function useList(init) {

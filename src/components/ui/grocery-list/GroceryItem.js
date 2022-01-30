@@ -1,7 +1,7 @@
 import "./styles.scss";
 
-import Box from "../box/Box";
-import GButton from "../button/Button";
+import Box from "components/ui/box/Box";
+import GButton from "components/ui/button/Button";
 import PropTypes from "prop-types";
 import React from "react";
 

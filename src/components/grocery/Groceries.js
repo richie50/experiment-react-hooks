@@ -1,12 +1,12 @@
 import "./styles.scss";
 
-import GroceryItem from "../ui/grocery-list/GroceryItem";
+import GroceryItem from "components/ui/grocery-list/GroceryItem";
 import PropTypes from "prop-types";
 import React from "react";
-import useList from "../../hooks/use-list";
+import useList from "hooks/use-list";
 
 function Groceries({ listItems }) {
-  const { addItem, removeItem } = useList(listItems);
+  const { addItem } = useList(listItems);
 
   const handleGroceryItem = (dto) => {
     console.log(dto);

@@ -1,11 +1,10 @@
 import "./styles.scss";
 
-import { Link, Outlet } from "react-router-dom";
 import React, { useMemo } from "react";
 
-import Groceries from "../../../components/grocery/Groceries";
-import { getList } from "../../../mock";
-import useHttp from "../../../hooks/use-http";
+import Groceries from "components/grocery/Groceries";
+import { getList } from "mock";
+import useHttp from "hooks/use-http";
 
 function HomePage() {
   const lists = useMemo(() => {

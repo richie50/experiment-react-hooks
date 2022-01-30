@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should match snapshot 1`] = `
+<div>
+  <div
+    class="form-field"
+  >
+    <label
+      for="test"
+    >
+      Snapshot
+    </label>
+    <input
+      data-testid="generic-input"
+      id="Snapshot"
+      name="test"
+      placeholder="Snapshot"
+      type="text"
+    />
+  </div>
+</div>
+`;

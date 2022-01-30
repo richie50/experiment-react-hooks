@@ -2,11 +2,11 @@ import "./styles.scss";
 
 import React, { useContext, useEffect, useRef, useState } from "react";
 
-import Box from "../ui/box/Box";
-import GButton from "../ui/button/Button";
-import GroceryInput from "../ui/input/GroceryInput";
-import { authenticationContext } from "../../provider/auth-context";
-import usePrevious from "../../hooks/use-previous";
+import Box from "components/ui/box/Box";
+import GButton from "components/ui/button/Button";
+import GroceryInput from "components/ui/input/GroceryInput";
+import { authenticationContext } from "provider/auth-context";
+import usePrevious from "hooks/use-previous";
 
 function Login() {
   // Lesson is using forward refs const inputRef = useRef(type === "number" ? 0 : "");
@@ -54,38 +54,41 @@ function Login() {
   //   }, [email, pass]);
 
   useEffect(() => {
-    console.log(emailRef.current);
+    // console.log(emailRef.current);
     emailRef.current.focus();
     return () => {};
   }, []);
 
   return (
-    <form className="grocery-login-form" onSubmit={loginHandler}>
-      <div className="grocery-login-form__container">
-        <Box className="grocery-login-form__form-field">
-          <GroceryInput
-            ref={emailRef}
-            type="text"
-            label="Email"
-            name="email"
-            changeHandler={onChangeHandler}
-            keyPressHandle={onKeyPressHandle}
-          />
-          <GroceryInput
-            ref={passwordRef}
-            type="password"
-            label="Password"
-            name="pass"
-            changeHandler={onChangeHandler}
-            keyPressHandle={onKeyPressHandle}
-          />
-          <GButton type="submit" className="grocery-login-form__button">
-            Login
-          </GButton>
-        </Box>
-        <p>You entered {email}</p>
-      </div>
-    </form>
+    <div data-testid="login">
+      <h2>Sign In To React Hooks Discord</h2>
+      <form className="grocery-login-form" onSubmit={loginHandler}>
+        <div className="grocery-login-form__container">
+          <Box className="grocery-login-form__form-field">
+            <GroceryInput
+              ref={emailRef}
+              type="text"
+              label="Email"
+              name="email"
+              changeHandler={onChangeHandler}
+              keyPressHandle={onKeyPressHandle}
+            />
+            <GroceryInput
+              ref={passwordRef}
+              type="password"
+              label="Password"
+              name="pass"
+              changeHandler={onChangeHandler}
+              keyPressHandle={onKeyPressHandle}
+            />
+            <GButton type="submit" className="grocery-login-form__button">
+              Login
+            </GButton>
+          </Box>
+          <p>You entered {email}</p>
+        </div>
+      </form>
+    </div>
   );
 }
 

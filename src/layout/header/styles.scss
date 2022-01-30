@@ -7,7 +7,7 @@
 .header-primary {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     &__title {
         color: rgb(87, 173, 243);
@@ -27,6 +27,11 @@
 }
 
 .header-navigation {
+    >ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
     &__list {
         margin: 1rem;
         >li {
